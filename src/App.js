@@ -13,7 +13,6 @@ class App extends Component {
         <h1> Welcome to Siddharth Karanchery's Web Page</h1>
         <img src={profileImage} alt="profile-photo" />
         <h2>The site is currently under development</h2>
-        <h3>test</h3>
       </div>
     );
   }
