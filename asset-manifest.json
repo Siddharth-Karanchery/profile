@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.css": "/profile/static/css/main.cf2c7594.chunk.css",
-    "main.js": "/profile/static/js/main.51cf64bf.chunk.js",
-    "main.js.map": "/profile/static/js/main.51cf64bf.chunk.js.map",
-    "runtime-main.js": "/profile/static/js/runtime-main.3f6aa0eb.js",
-    "runtime-main.js.map": "/profile/static/js/runtime-main.3f6aa0eb.js.map",
-    "static/js/2.4166b486.chunk.js": "/profile/static/js/2.4166b486.chunk.js",
-    "static/js/2.4166b486.chunk.js.map": "/profile/static/js/2.4166b486.chunk.js.map",
-    "static/js/3.6e30809a.chunk.js": "/profile/static/js/3.6e30809a.chunk.js",
-    "static/js/3.6e30809a.chunk.js.map": "/profile/static/js/3.6e30809a.chunk.js.map",
+    "main.css": "/profile/static/css/main.a4b1a4ab.chunk.css",
+    "main.js": "/profile/static/js/main.6d9fbfb3.chunk.js",
+    "main.js.map": "/profile/static/js/main.6d9fbfb3.chunk.js.map",
+    "runtime-main.js": "/profile/static/js/runtime-main.97fee206.js",
+    "runtime-main.js.map": "/profile/static/js/runtime-main.97fee206.js.map",
+    "static/js/2.497af9bf.chunk.js": "/profile/static/js/2.497af9bf.chunk.js",
+    "static/js/2.497af9bf.chunk.js.map": "/profile/static/js/2.497af9bf.chunk.js.map",
+    "static/js/3.0cf16513.chunk.js": "/profile/static/js/3.0cf16513.chunk.js",
+    "static/js/3.0cf16513.chunk.js.map": "/profile/static/js/3.0cf16513.chunk.js.map",
     "index.html": "/profile/index.html",
-    "static/css/main.cf2c7594.chunk.css.map": "/profile/static/css/main.cf2c7594.chunk.css.map",
-    "static/js/2.4166b486.chunk.js.LICENSE.txt": "/profile/static/js/2.4166b486.chunk.js.LICENSE.txt",
-    "static/media/sid-pic.987b7235.jpg": "/profile/static/media/sid-pic.987b7235.jpg"
+    "static/css/main.a4b1a4ab.chunk.css.map": "/profile/static/css/main.a4b1a4ab.chunk.css.map",
+    "static/js/2.497af9bf.chunk.js.LICENSE.txt": "/profile/static/js/2.497af9bf.chunk.js.LICENSE.txt",
+    "static/media/cert1.716de94b.jpg": "/profile/static/media/cert1.716de94b.jpg",
+    "static/media/dbp.5aa46b49.jpg": "/profile/static/media/dbp.5aa46b49.jpg",
+    "static/media/dcpp.334e5f91.jpg": "/profile/static/media/dcpp.334e5f91.jpg",
+    "static/media/internet-of-things.eff19e7d.png": "/profile/static/media/internet-of-things.eff19e7d.png",
+    "static/media/pb.fc14702b.jpg": "/profile/static/media/pb.fc14702b.jpg",
+    "static/media/pf.aafa75b7.jpg": "/profile/static/media/pf.aafa75b7.jpg",
+    "static/media/ph.3e842197.jpg": "/profile/static/media/ph.3e842197.jpg",
+    "static/media/sid-pic-square.2fd5275e.jpg": "/profile/static/media/sid-pic-square.2fd5275e.jpg",
+    "static/media/sid-pic.987b7235.jpg": "/profile/static/media/sid-pic.987b7235.jpg",
+    "static/media/skwhite.ec7240ad.png": "/profile/static/media/skwhite.ec7240ad.png",
+    "static/media/smartphone-app-svgrepo-com.676a61be.png": "/profile/static/media/smartphone-app-svgrepo-com.676a61be.png",
+    "static/media/sql.5782cf7b.jpg": "/profile/static/media/sql.5782cf7b.jpg",
+    "static/media/web-design-svgrepo-com.9f4a031d.png": "/profile/static/media/web-design-svgrepo-com.9f4a031d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f6aa0eb.js",
-    "static/js/2.4166b486.chunk.js",
-    "static/css/main.cf2c7594.chunk.css",
-    "static/js/main.51cf64bf.chunk.js"
+    "static/js/runtime-main.97fee206.js",
+    "static/js/2.497af9bf.chunk.js",
+    "static/css/main.a4b1a4ab.chunk.css",
+    "static/js/main.6d9fbfb3.chunk.js"
   ]
 }
