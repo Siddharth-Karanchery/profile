@@ -1,0 +1,228 @@
+.Resume {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.Resume__experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.Resume__experience__header {
+  font-size: 25px;
+  padding: 10px 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#Resume__button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #032174;
+  border-radius: 40px;
+}
+#Resume__button:hover {
+  cursor: pointer;
+  box-shadow: 0 4spx 4px;
+  transform: scale(1.02);
+  transition: transform 0.1s;
+}
+.Resume__experience__body {
+  width: 60%;
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: column;
+}
+.Resume__experience__body__card {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.Resume__experience__body__card__left {
+  min-width: 370px;
+  padding-top: -1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.Resume__experience__body__card__right {
+  min-width: 1000px;
+  display: flex;
+  margin-left: -1rem;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#Resume__exp__duration {
+  font-size: 30px;
+  font-weight: bold;
+}
+#Resume__exp__company {
+  margin-top: -1.2rem;
+  font-size: 20px;
+}
+#Resume__exp__title {
+  margin-top: -0.5rem;
+  font-size: 15px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+}
+#Resume__exp__location {
+  margin-top: -0.5rem;
+  font-size: 15px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+}
+#Resume__exp__point {
+  margin-left: -1rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  /* min-width: 100px; */
+  text-align: justify;
+}
+.Resume__education {
+  width: 100%;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#Resume__education__body {
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+#Resume__education__body__card {
+  flex-direction: column;
+  min-width: 44%;
+}
+#Resume__education__body__card__element {
+  /* max-width: 50%; */
+}
+.Resume__tools {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.Resume__tools__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.Resume__tools__body__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 0.8rem;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.582);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 33%;
+}
+#Resume__grid__icon {
+  color: white;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.2rem;
+}
+#Resume__iconArray {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+}
+#Resume__grid__icon__small {
+  width: 22px;
+  height: 22px;
+  color: white;
+  margin: 0 5px;
+}
+#Resume__iconArray__element {
+  margin: 12px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*/////// MOBILE ////////*/
+@media screen and (max-width: 480px) {
+  .Resume__experience__header {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    justify-content: space-evenly;
+  }
+  #Resume__button {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+  .Resume__experience__body {
+    width: 100%;
+  }
+  .Resume__experience__body__card {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+  }
+  .Resume__experience__body__card__left {
+    min-width: 100%;
+  }
+  #Resume__exp__duration {
+    font-size: 1.5rem;
+  }
+  #Resume__exp__company {
+    font-size: 1.2rem;
+  }
+  #Resume__exp__title {
+    font-size: 1rem;
+  }
+  #Resume__exp__location {
+    font-size: 0.8rem;
+  }
+  .Resume__experience__body__right {
+    margin-top: -1rem;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  #Resume__exp__point {
+    font-size: 0.8rem;
+  }
+  #Resume__education__body {
+    flex-direction: column;
+  }
+  .Resume__tools__body {
+    flex-direction: column;
+  }
+  .Resume__tools__body__element {
+    margin: 1rem 0.8rem;
+  }
+}

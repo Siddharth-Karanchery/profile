@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
+
+.Contact {
+  width: 99vw;
+  min-height: 90vh;
+  margin-top: -1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.Contact__left {
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+.Contact__left__title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1rem;
+  margin-bottom: 3rem;
+}
+.Contact__left__item {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5rem 5rem;
+}
+#Contact__icon__back {
+  min-width: 3rem;
+  min-height: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#Contact__icon__icon {
+  transform: scale(1.2);
+  color: rgba(255, 255, 255, 0.6);
+}
+.Contact__left__iconPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2rem 1rem;
+  width: 80%;
+  align-self: center;
+}
+#Contact__icon__iconSocial {
+  transform: scale(1.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+#Contact__icon__iconSocial:hover {
+  cursor: pointer;
+}
+.Contact__right {
+  min-width: 50vw;
+  /* padding: 1rem; */
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+}
+.Contact__right__input {
+  width: 90%;
+  height: 4rem;
+  font-size: large;
+  padding: 0.3rem 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  margin: 0.8rem 0;
+}
+.Contact__right__select {
+  width: 94%;
+  height: 4rem;
+  font-size: large;
+  padding: 0.3rem 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  margin: 0.8rem 0;
+}
+#Contact__select__element {
+  /* background-color: rgba(255, 255, 255, 0.25); */
+  backdrop-filter: blur(4px);
+}
+.Contact__right__text {
+  width: 90%;
+  height: 15rem;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 0.8rem 0;
+  color: white;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.534);
+  opacity: 1; /* Firefox */
+}
+.Contact__right__button {
+  padding: 1rem 2rem;
+  color: rgba(255, 255, 255, 0.534);
+  align-self: flex-start;
+  margin: 0.8rem 3rem;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+}
+/* option {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+} */
+
+/*////////////// MOBILE ///////////  */
+@media screen and (max-width: 480px) {
+  .Contact {
+    flex-direction: column-reverse;
+  }
+  .Contact__left {
+    max-width: 98vw;
+  }
+  .Contact__left__title {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: -0.1rem;
+  }
+  .Contact__left__item {
+    margin: 1rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  #Contact__icon__icon {
+    transform: scale(1);
+  }
+  #Contact__icon__iconSocial {
+    font-size: 1.2rem;
+  }
+  .Contact__right {
+    width: 90vw;
+    margin-top: 2rem;
+  }
+  .Contact__right__input {
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+  .Contact__right__select {
+    width: 99%;
+    height: 3rem;
+    font-size: 0.9rem;
+  }
+  .Contact__right__text {
+    font-size: 0.9rem;
+  }
+  .Contact__right__button {
+    align-self: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.6rem 1.5rem;
+    margin: 0.1rem 3rem 2rem 3rem;
+  }
+}

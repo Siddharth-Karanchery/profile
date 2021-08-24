@@ -1,0 +1,86 @@
+.Portfolio {
+  width: 99vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  color: white;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+.Portfolio__element {
+  width: 100%;
+  margin: 5rem 0;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Portfolio__element__header {
+  text-transform: uppercase;
+}
+.Portfolio__element__body {
+  display: flex;
+  flex-direction: row;
+}
+.Portfolio__element__body__carouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(
+    40deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.6)
+  );
+  /* background: rgba(255, 255, 255, 0.25); */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 30px;
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+#Portfolio__carouselItem__title {
+  font-size: 25px;
+  font-weight: bold;
+}
+#Portfolio__carouselItem__tagList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 1%;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+#Portfolio__carouselItem__tags {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 15px;
+  background: linear-gradient(
+    40deg,
+    rgba(3, 33, 116, 0.2),
+    rgba(3, 33, 116, 0.75)
+  );
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+#Portfolio__carouselItem__image {
+  margin-bottom: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.5);
+  width: 80%;
+}
+#Portfolio__carouselItem__image:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: transform 0.2s;
+}
+
+/*/////// MOBILE ////////////*/
+@media screen and (max-width: 480px) {
+  #Portfolio__carouselItem__image {
+    width: 300px;
+  }
+}
