@@ -2,7 +2,17 @@
 
 :root {
   --background: #032174;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+:root::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   width: 100vw;
   display: flex;

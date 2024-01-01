@@ -1,5 +1,5 @@
 export const HeaderTabs = [
-  { tabName: "Home", path: "/" },
+  { tabName: "About", path: "/" },
   { tabName: "Resume", path: "/resume" },
   { tabName: "Portfolio", path: "/portfolio" },
   { tabName: "Certificates", path: "/certificates" },

@@ -1,11 +1,10 @@
-import { Box, Button, CssBaselineProps, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { ButtonProps } from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-//@ts-ignore
 import photo from "../../../assets/sid-pic-square.jpg";
 
 import "./MainBanner.css";

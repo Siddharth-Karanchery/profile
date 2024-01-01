@@ -9,7 +9,7 @@ import { HeaderTabs } from "../../Data/HeaderTabs";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [currentTab, setCurrentTab] = React.useState("Home");
+  const [currentTab, setCurrentTab] = React.useState("About");
 
   const handleTabSelect = (tabName: string) => {
     setCurrentTab(tabName);
