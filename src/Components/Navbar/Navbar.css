@@ -1,0 +1,30 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+.Navbar__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Navbar__logo__image {
+  height: 50px;
+  margin-right: 10px;
+}
+.Navbar__HeaderTabs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+.Navbar__HeaderTabs__Tab,
+.Navbar__HeaderTabs__Tab__current {
+  margin: 0px 10px;
+  padding: 5px 10px;
+  color: white;
+}
+.Navbar__HeaderTabs__Tab__current {
+  border-bottom: 3px solid white;
+}
