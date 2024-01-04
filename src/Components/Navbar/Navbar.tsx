@@ -8,14 +8,12 @@ import "./Navbar.css";
 import { HeaderTabs } from "../../Data/HeaderTabs";
 import { Link } from "react-router-dom";
 
-function Navbar() {
-  const [currentTab, setCurrentTab] = React.useState("About");
+declare interface propType {
+  currentTab: string;
+  handleTabSelect: Function;
+}
 
-  const handleTabSelect = (tabName: string) => {
-    setCurrentTab(tabName);
-  };
-  console.log("test");
-
+function Navbar(props: propType) {
   return (
     <Grid className="Navbar">
       <Grid item container className="Navbar__logo" lg={4}>
@@ -27,9 +25,9 @@ function Navbar() {
           {HeaderTabs.map((tab) => (
             <Link to={tab.path} style={{ textDecoration: "none" }}>
               <Box
-                onClick={() => handleTabSelect(tab.tabName)}
+                onClick={() => props.handleTabSelect(tab.tabName)}
                 className={
-                  tab.tabName === currentTab
+                  tab.tabName === props.currentTab
                     ? "Navbar__HeaderTabs__Tab__current"
                     : "Navbar__HeaderTabs__Tab"
                 }

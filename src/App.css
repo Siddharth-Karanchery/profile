@@ -2,6 +2,7 @@
 
 :root {
   --background: #032174;
+  --backgroundDark: #000056;
 
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
