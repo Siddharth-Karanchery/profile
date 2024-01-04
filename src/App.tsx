@@ -8,11 +8,17 @@ import Portfolio from "./Pages/Portfolio/Portfolio";
 import Certificates from "./Pages/Certificates/Certificates";
 import Contact from "./Pages/Contact/Contact";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
+  const [currentTab, setCurrentTab] = React.useState("About");
+
+  const handleTabSelect = (tabName: string) => {
+    setCurrentTab(tabName);
+  };
   return (
     <div className="App">
-      <Navbar />
+      <Navbar currentTab={currentTab} handleTabSelect={handleTabSelect} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
@@ -20,6 +26,7 @@ function App() {
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer handleTabSelect={handleTabSelect} />
     </div>
   );
 }
