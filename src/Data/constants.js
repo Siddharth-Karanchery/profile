@@ -7,3 +7,5 @@ export const InstagramPath =
   "https://www.instagram.com/artificial.intelligens_art/";
 
 export const TwitterPath = "https://twitter.com/siddie_k";
+
+export const TestimonialThumb = "https://drive.google.com/uc?export=view&id=";
