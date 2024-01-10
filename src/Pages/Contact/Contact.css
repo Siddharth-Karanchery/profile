@@ -7,10 +7,40 @@
 }
 .Contact__left,
 .Contact__right {
-  background-color: red;
   width: 45%;
   height: 70%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Contact__left__ele,
+.Contact__left__social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  height: 10%;
+  margin: 10px 0;
+}
+.Contact__left__ele__iconBox {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.Contact__left__social {
+  justify-content: space-evenly;
+  margin: 40px 0;
 }
 .Contact__right {
   background: rgba(255, 255, 255, 0.15);

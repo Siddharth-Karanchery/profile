@@ -8,12 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import photo from "../../../assets/sid-pic-square.jpg";
 
 import "./MainBanner.css";
-import {
-  GithubPath,
-  InstagramPath,
-  LinkedInPath,
-  TwitterPath,
-} from "../../../Data/constants";
+import { redirect } from "../../../Functions/Functions";
 
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: "black",
@@ -28,23 +23,6 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
 }));
 
 function MainBanner() {
-  const redirect = (link: string) => {
-    switch (link) {
-      case "Github":
-        window.open(GithubPath, "_blank", "noreferrer");
-        break;
-      case "LinkedIn":
-        window.open(LinkedInPath, "_blank", "noreferrer");
-        break;
-      case "Instagram":
-        window.open(InstagramPath, "_blank", "noreferrer");
-        break;
-      case "Twitter":
-        window.open(TwitterPath, "_blank", "noreferrer");
-        break;
-    }
-  };
-
   return (
     <Box className="MainBanner">
       <Box className="MainBanner__left">
