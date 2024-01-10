@@ -1,0 +1,51 @@
+.Resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+.Resume__Header,
+.Resume__Body {
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.Resume__Header__Text,
+.Resume__ele__left__companyName {
+  text-transform: uppercase;
+}
+
+.Resume__Body {
+  flex-direction: column;
+}
+.Resume__Body__ele {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Resume__Body__ele__left,
+.Resume__Body__ele__right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Resume__Body__ele__left {
+  padding: 20px 0;
+}
+.Resume__Body__ele__right {
+  width: 65%;
+}

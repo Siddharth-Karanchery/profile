@@ -10,18 +10,6 @@ import photo from "../../../assets/sid-pic-square.jpg";
 import "./MainBanner.css";
 import { redirect } from "../../../Functions/Functions";
 
-const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  color: "black",
-  fontWeight: "bold",
-  width: "10rem",
-  borderRadius: "2rem",
-  marginTop: "5rem",
-  backgroundColor: "white",
-  "&:hover": {
-    backgroundColor: "#F0F0F0",
-  },
-}));
-
 function MainBanner() {
   return (
     <Box className="MainBanner">
@@ -67,3 +55,15 @@ function MainBanner() {
 }
 
 export default MainBanner;
+
+const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  color: "black",
+  fontWeight: "bold",
+  width: "10rem",
+  borderRadius: "2rem",
+  marginTop: "5rem",
+  backgroundColor: "white",
+  "&:hover": {
+    backgroundColor: "#F0F0F0",
+  },
+}));
