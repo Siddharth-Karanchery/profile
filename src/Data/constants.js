@@ -9,3 +9,9 @@ export const InstagramPath =
 export const TwitterPath = "https://twitter.com/siddie_k";
 
 export const TestimonialThumb = "https://drive.google.com/uc?export=view&id=";
+
+export const SERVICE_ID = "service_9fojm7j";
+export const TEMPLATE_ID = "contact_form";
+export const USER_ID = "user_NYKKjtpjlQJ6ULWwlH0Ha";
+
+export const EMAIL_URL = "https://api.emailjs.com/api/v1.0/email/send";
