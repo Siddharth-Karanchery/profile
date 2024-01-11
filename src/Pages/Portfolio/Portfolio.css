@@ -1,0 +1,9 @@
+.Portfolio {
+  background-color: var(--background);
+  padding: 5rem 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
