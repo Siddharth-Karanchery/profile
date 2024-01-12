@@ -31,7 +31,7 @@ function PortfolioCard(props: PropType) {
         ))}
       </Box>
       <img
-        style={{ transform: "scale(0.78)" }}
+        style={{ transform: "scale(0.9)" }}
         src={`${cloudinaryBaseURL}${props.thumbId}`}
         alt=""
       />

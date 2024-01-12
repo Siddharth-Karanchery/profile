@@ -1,40 +1,40 @@
 export const sketchesData = [
   {
     title: "'Saviour'",
-    imageId: "1MvqG53JpK2qz-Y-sAm738yqfoGTSyMhK",
-    thumbId: "1TRK1qgP2liT-n_PK79i6feog67SJz06i",
+    imageId: "v1705080611/Sketches/mjhzc56pyvd2eo70v8sc.jpg",
+    thumbId: "v1705080762/Thumbs/Sketches/jciub05dftkjxientarb.jpg",
     tags: ["Pencil", "Paper"],
   },
 
   {
     title: "'Sketch'",
-    imageId: "1MyDqF3VIffK0UBqwehQhGCfE86-6QvmQ",
-    thumbId: "1Q5MaecglVPA-l_wJlxngOaPUQUwVOxnW",
+    imageId: "v1705080613/Sketches/xibnp0rzk35s0emlke0y.jpg",
+    thumbId: "v1705080763/Thumbs/Sketches/eivojqi2hutu2oj5mwyg.jpg",
     tags: ["Charcoal", "Paper"],
   },
   {
     title: "'Havelské tržiště'(Prague)",
-    imageId: "1YGIKZe0NycMPC1IzWeJZJFa9FW1c_Gsw",
-    thumbId: "17lNEKrSmsfqdmWzKmkBIiLkCDZJSOMAK",
+    imageId: "v1705080613/Sketches/wa1x5pgvzhtafksc6zux.jpg",
+    thumbId: "v1705080764/Thumbs/Sketches/bwu2n95xa5pd0srd2llz.jpg",
     tags: ["Charcoal", "Paper"],
   },
   {
     title: "'Enlightenment'",
-    imageId: "1uoC0O4m2hspRFurHDwgFEDfLiqTK2TTq",
-    thumbId: "1kfEQUsMkfRj-r7kSa9TN7pLCuDpv0Zg-",
+    imageId: "v1705080613/Sketches/wpuw4btxzno7cfxb2zly.jpg",
+    thumbId: "v1705080764/Thumbs/Sketches/mncfcpratqqfc4m4wti0.jpg",
     tags: ["Charcoal", "Paper"],
   },
   {
     title: "'Sketch'",
-    imageId: "1_yVCo_R5LfGgyMoswBOwI6tvrenW3jYv",
-    thumbId: "1KsmXtNvezbTG3oxjB657HTdpK9iE836z",
+    imageId: "v1705080610/Sketches/iqbwihplgnyms7u6fh1r.jpg",
+    thumbId: "v1705080761/Thumbs/Sketches/nwwx5wlyxiltewtaukgt.jpg",
     tags: ["Pencil", "Paper"],
   },
 
   {
     title: "'Sleeping Hermaphroditus'(Louvre)",
-    imageId: "1tbJF6Fv4NcCGSw01eZPSQ1f_WPOVnbmO",
-    thumbId: "1A_R94KQy6ao4mO_rKekW7FxxarTX5efT",
+    imageId: "v1705080610/Sketches/nuxqvzqtwqha7bkpkrht.jpg",
+    thumbId: "v1705080760/Thumbs/Sketches/ffredxpvalygc97i3kov.jpg",
     tags: ["Charcoal", "Paper"],
   },
 ];
