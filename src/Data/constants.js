@@ -15,3 +15,6 @@ export const TEMPLATE_ID = "contact_form";
 export const USER_ID = "user_NYKKjtpjlQJ6ULWwlH0Ha";
 
 export const EMAIL_URL = "https://api.emailjs.com/api/v1.0/email/send";
+
+export const cloudinaryBaseURL =
+  "https://res.cloudinary.com/dojwdze7d/image/upload/";

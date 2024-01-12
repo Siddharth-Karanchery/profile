@@ -1,8 +1,6 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "./TestimonialCard.css";
 import { Box, Typography } from "@mui/material";
-import { TestimonialThumb } from "../../../../Data/constants";
+import { cloudinaryBaseURL } from "../../../../Data/constants";
 
 declare interface propType {
   name: string;
@@ -17,7 +15,7 @@ function TestimonialCard(props: propType) {
       <Box className="TestimonialCard__Header">
         <img
           className="TestimonialCard__thumb"
-          src={`${TestimonialThumb}${props.thumbId}`}
+          src={`${cloudinaryBaseURL}${props.thumbId}`}
           alt="Testimonial user"
         />
         <Box className="TestimonialCard__Header__Details">
