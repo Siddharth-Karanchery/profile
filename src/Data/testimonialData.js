@@ -3,7 +3,7 @@ export const testimonials = [
     name: "Akash Patil",
     title: "Sales Director",
     thumbId: "v1705080719/Thumbs/Photos/dpuias7fdhua06njzwh6.jpg",
-    text: "A person of dedication & perfection striving to achieve the best outcome is the best way to describe Siddharth. It is a motivation to work with a team-mate like Siddharth... ",
+    text: "A person of dedication & perfection striving to achieve the best outcome is the best way to describe Siddharth. It is a motivation to work with a team-mate like Siddharth. ",
   },
   {
     name: "Chinmaya Parida",

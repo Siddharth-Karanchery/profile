@@ -1,59 +1,46 @@
 export const paintingData = [
   {
     title: "'Serenity'",
-    imageId: "1ZsOeFQXZwrREQesgjSnufoTCI60D1SOG",
-    thumbId: "1y15hWgbN-31KYceOZCQM78-lTSLwWjYU",
+    imageId: "v1705080591/Paintings/vs0alc3fcujqj8jikxzy.jpg",
+    thumbId: "v1705080698/Thumbs/Paintings/nbcrxexczewhiss050vh.jpg",
     tags: ["Acrylic", "Canvas"],
   },
   {
     title: "'Solitude'",
-    imageId: "1pPefWqwLfpPIaVvPNnit8fsbpjX3gK1-",
-    thumbId: "1eATQrcAjf4tdc_IalvCUzxoVpHAtYF1J",
+    imageId: "v1705080592/Paintings/mfeihxupvosnps9feu7n.jpg",
+    thumbId: "v1705080694/Thumbs/Paintings/lncacrnokxgzkrs5uy71.jpg",
     tags: ["Oil", "Canvas"],
   },
-
   {
     title: "'Shell'",
-    imageId: "1440RyO2Os1VvdIvKlIGaWAQR_-k8cE6p",
-    thumbId: "1JHad_AgCFJAdkMES7j7y18pvLmuk2Byf",
+    imageId: "v1705080588/Paintings/isufpu4wbgb7tgmpjhsb.jpg",
+    thumbId: "v1705080692/Thumbs/Paintings/a1davhbe2pnpxo6kvtwe.jpg",
     tags: ["Acrylic", "Canvas"],
   },
-
   {
     title: "'Somewhere'",
-    imageId: "1130HXXoeze-82UyIWfok6hBZNfIwPEEh",
-    thumbId: "1nU1cSn6qDPnqDgX0nAfKUrYqUGkLXTw-",
+    imageId: "v1705080593/Paintings/rmrryq1hzvpfefkfvj1n.jpg",
+    thumbId: "v1705080696/Thumbs/Paintings/zpn9883r2dxe9vhujepm.jpg",
     tags: ["Acrylic", "Canvas"],
   },
   {
     title: "'Solace'",
-    imageId: "1yas-jtDAUrvzOqGhZNMyBOlYyr0IAJey",
-    thumbId: "1UonfN6pYfOGQMvNUf7Av3H9au5Nnr4Bs",
+    imageId: "v1705080591/Paintings/vdqllejkzazx81faqzh2.jpg",
+    thumbId: "v1705080694/Thumbs/Paintings/wiufpponcd1f8c37gdp3.jpg",
     tags: ["Acrylic", "Canvas"],
   },
 
   {
     title: "'Silence'",
-    imageId: "1mvpgfYh1zF-KiMTp9EUqloe1p6Xz7Nte",
-    thumbId: "18aXDPxlAYA38p1SAY1DjYu4GZVGD6zAN",
+    imageId: "v1705080695/Thumbs/Paintings/yqqi9ubzpafgowhjty3y.jpg",
+    thumbId: "v1705080592/Paintings/mjcysejejib5jn8ouxii.jpg",
     tags: ["Acrylic", "Canvas"],
   },
-  {
-    title: "'Seam'",
-    imageId: "1oPplr2wBPVpRWGJ-VItckgCnU-jL7r_2",
-    thumbId: "1fg-ljMJ8pB4D7O-5karzukD0pTTZh7aS",
-    tags: ["Acrylic", "Canvas"],
-  },
-  {
-    title: "'Solitude'",
-    imageId: "1ewdGhudwqiYNstm9COAWzoekRdggNBKh",
-    thumbId: "1ewdGhudwqiYNstm9COAWzoekRdggNBKh",
-    tags: ["Acrylic", "Canvas"],
-  },
+
   {
     title: "'Seas'",
-    imageId: "1gd_lxB45Ip8lNukV9pN6InxhbB7Gqu4I",
-    thumbId: "15WwsaTYgwPn7Kys3Z68lRj4mqrcRqGPR",
+    imageId: "v1705080590/Paintings/vrxwjxd1xfarpe03g4xk.jpg",
+    thumbId: "v1705080697/Thumbs/Paintings/oknr03nnf0mw7lrimyzy.jpg",
     tags: ["Acrylic", "Canvas"],
   },
 ];
