@@ -40,3 +40,34 @@
   width: 80%;
   margin-right: 20px;
 }
+/*-------------- Responsive Design ------------------- */
+/*-------------- MOBILE ------------------- */
+@media screen and (max-width: 450px) {
+  .Skillset {
+    height: max-content;
+    padding: 2rem 0;
+  }
+  .Skillset__title {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .Skillset__panel {
+    width: 90%;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  .Skillset__panel__ele {
+    width: 90%;
+    height: 100%;
+  }
+  .Skillset__panel__ele__skill {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .Skillset__panel__ele__skill__title {
+    width: 40%;
+  }
+  .Skillset__panel__ele__skill__loader {
+    width: 50%;
+  }
+}

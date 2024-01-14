@@ -30,3 +30,28 @@
   align-items: center;
   padding: 0 4rem;
 }
+/*-------------- Responsive Design ------------------- */
+/*-------------- MOBILE ------------------- */
+@media screen and (max-width: 450px) {
+  .TestimonialCard {
+    padding: 1rem;
+  }
+  .TestimonialCard__Header {
+    height: 10vh;
+    margin: 0rem;
+    margin-bottom: -1rem;
+  }
+  .TestimonialCard__thumb {
+    max-width: 3.5rem;
+    max-height: 3.5rem;
+    margin-left: 1rem;
+  }
+  .TestimonialCard__Header__Details {
+    width: 90%;
+  }
+  .TestimonialCard__Body {
+    height: 25vh;
+
+    padding: 0 2rem;
+  }
+}

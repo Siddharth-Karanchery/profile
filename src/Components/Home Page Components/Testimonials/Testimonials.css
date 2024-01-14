@@ -35,3 +35,41 @@
   height: 100%;
   object-fit: cover;
 }
+/*-------------- Responsive Design ------------------- */
+/*-------------- MOBILE ------------------- */
+@media screen and (max-width: 450px) {
+  .Testimonials {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .Testimonials__title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .swiper {
+    width: 90%;
+    height: 100%;
+    color: black;
+    margin-top: 2rem;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

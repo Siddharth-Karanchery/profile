@@ -1,3 +1,4 @@
+import useMediaQuery from "@mui/material/useMediaQuery";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,16 +13,21 @@ import { Box } from "@mui/material";
 import { testimonials } from "../../../Data/testimonialData";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import { Typography } from "@mui/material";
+import { mobileBreakpoint } from "../../../Data/constants";
 
 function Testimonials() {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
   return (
     <Box className="Testimonials">
-      <Typography variant="h3" className="Testimonials__title">
+      <Typography
+        variant={isMobile ? "h4" : "h3"}
+        className="Testimonials__title"
+      >
         Testimonials
       </Typography>
       <Swiper
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={isMobile ? 1 : 3}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

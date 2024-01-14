@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { ButtonProps } from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -9,8 +10,11 @@ import photo from "../../../assets/sid-pic-square.jpg";
 
 import "./MainBanner.css";
 import { redirect } from "../../../Functions/Functions";
+import { mobileBreakpoint } from "../../../Data/constants";
 
 function MainBanner() {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
   return (
     <Box className="MainBanner">
       <Box className="MainBanner__left">
@@ -30,11 +34,16 @@ function MainBanner() {
       </Box>
       <Box className="MainBanner__right">
         <Box className="MainBanner__right__text">
-          <Typography variant="h6">Hello World! I'm</Typography>
-          <Typography variant="h1" style={{ width: "50%", fontSize: "7rem" }}>
+          <Typography variant={isMobile ? "subtitle1" : "h6"}>
+            Hello World! I'm
+          </Typography>
+          <Typography
+            variant={isMobile ? "h2" : "h1"}
+            style={{ width: "50%", fontSize: `${isMobile ? 4 : 7}rem` }}
+          >
             Siddharth Karanchery
           </Typography>
-          <Typography variant="h5">
+          <Typography variant={isMobile ? "h6" : "h5"}>
             UI Designer, Web developer & Mobile App developer
           </Typography>
         </Box>

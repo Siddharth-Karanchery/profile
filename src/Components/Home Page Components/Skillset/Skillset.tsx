@@ -1,11 +1,15 @@
 import { Box, LinearProgress, Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import "./Skillset.css";
 import { skillsetData } from "../../../Data/skillsetData";
+import { mobileBreakpoint } from "../../../Data/constants";
 
 function Skillset() {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
   return (
     <Box className="Skillset">
-      <Typography variant="h3" className="Skillset__title">
+      <Typography variant={isMobile ? "h4" : "h3"} className="Skillset__title">
         Skillset
       </Typography>
       <Box className="Skillset__panel">
@@ -14,7 +18,7 @@ function Skillset() {
             <Box className="Skillset__panel__ele__skill">
               <Typography
                 className="Skillset__panel__ele__skill__title"
-                variant="h6"
+                variant={isMobile ? "subtitle1" : "h6"}
               >
                 {skill.name}
               </Typography>
@@ -35,7 +39,7 @@ function Skillset() {
             <Box className="Skillset__panel__ele__skill">
               <Typography
                 className="Skillset__panel__ele__skill__title"
-                variant="h6"
+                variant={isMobile ? "subtitle1" : "h6"}
               >
                 {skill.name}
               </Typography>
