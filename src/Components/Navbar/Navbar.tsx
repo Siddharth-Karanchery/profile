@@ -1,12 +1,15 @@
 import * as React from "react";
 
-import { Grid, Tab, Tabs, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 //@ts-ignore
 import logo from "../../assets/Siddharth_Karanchery.png";
+import logo_small from "../../assets/SK.png";
 import "./Navbar.css";
 import { HeaderTabs } from "../../Data/HeaderTabs";
 import { Link } from "react-router-dom";
+import { mobileBreakpoint } from "../../Data/constants";
 
 declare interface propType {
   currentTab: string;
@@ -14,13 +17,21 @@ declare interface propType {
 }
 
 function Navbar(props: propType) {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
   return (
-    <Grid className="Navbar">
-      <Grid item container className="Navbar__logo" lg={4}>
-        <img src={logo} alt="logo" className="Navbar__logo__image" />
-        <Typography variant="h6">/ Web Developer</Typography>
+    <Grid className="Navbar" flexDirection={isMobile ? "column" : "row"}>
+      <Grid item className="Navbar__logo">
+        <img
+          src={isMobile ? logo_small : logo}
+          alt="logo"
+          className="Navbar__logo__image"
+        />
+        <Typography variant={isMobile ? "subtitle1" : "h6"}>
+          / Web Developer
+        </Typography>
       </Grid>
-      <Grid item container lg={8}>
+      <Grid item className="Navbar__HeaderTabs">
         <Box className="Navbar__HeaderTabs">
           {HeaderTabs.map((tab) => (
             <Link to={tab.path} style={{ textDecoration: "none" }}>
@@ -32,7 +43,9 @@ function Navbar(props: propType) {
                     : "Navbar__HeaderTabs__Tab"
                 }
               >
-                <Typography>{tab.tabName}</Typography>
+                <Typography variant={isMobile ? "caption" : "h6"}>
+                  {tab.tabName}
+                </Typography>
               </Box>
             </Link>
           ))}

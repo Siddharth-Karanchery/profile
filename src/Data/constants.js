@@ -18,3 +18,5 @@ export const EMAIL_URL = "https://api.emailjs.com/api/v1.0/email/send";
 
 export const cloudinaryBaseURL =
   "https://res.cloudinary.com/dojwdze7d/image/upload/";
+
+export const mobileBreakpoint = 450;
