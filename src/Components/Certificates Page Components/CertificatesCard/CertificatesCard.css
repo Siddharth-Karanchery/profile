@@ -18,3 +18,10 @@
     cursor: default;
   }
 }
+/*-------------- Responsive Design ------------------- */
+/*-------------- MOBILE ------------------- */
+@media screen and (max-width: 450px) {
+  .CertificatesCard {
+    width: 100%;
+  }
+}

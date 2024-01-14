@@ -1,5 +1,7 @@
 import { Grid, Paper, Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import "./CertificatesCard.css";
+import { mobileBreakpoint } from "../../../Data/constants";
 
 declare interface propType {
   name: string;
@@ -10,9 +12,12 @@ declare interface propType {
 }
 
 function CertificatesCard(props: propType) {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
   const clickHandler = (link: string) => {
     window.open(link, "_blank");
   };
+
   return (
     <Grid item lg={4} className="CertificatesCard__Grid">
       <Paper className="CertificatesCard">
@@ -24,11 +29,18 @@ function CertificatesCard(props: propType) {
           alt=""
           onClick={() => clickHandler(props.link)}
         />
-        <Typography variant="h6" style={{ textAlign: "center" }}>
+        <Typography
+          variant={isMobile ? "subtitle1" : "h6"}
+          style={{ textAlign: "center" }}
+        >
           Course Name: {props.name}
         </Typography>
-        <Typography>Issued by: {props.issuedBy}</Typography>
-        <Typography>Date: {props.date}</Typography>
+        <Typography variant={isMobile ? "subtitle2" : "subtitle1"}>
+          Issued by: {props.issuedBy}
+        </Typography>
+        <Typography variant={isMobile ? "subtitle2" : "subtitle1"}>
+          Date: {props.date}
+        </Typography>
       </Paper>
     </Grid>
   );
