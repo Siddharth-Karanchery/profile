@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import useMediaQuery from "@mui/material/useMediaQuery";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,8 +17,26 @@ import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import { Typography } from "@mui/material";
 import { mobileBreakpoint } from "../../../Data/constants";
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firebase";
+
 function Testimonials() {
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
+  const fetchPost = async () => {
+    await getDocs(collection(db, "UI")).then((querySnapshot) => {
+      const newData = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      // setTodos(newData);
+      console.log("newData: ", newData);
+    });
+  };
+
+  React.useEffect(() => {
+    fetchPost();
+  }, []);
+
   return (
     <Box className="Testimonials">
       <Typography
