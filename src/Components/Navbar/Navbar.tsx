@@ -9,7 +9,7 @@ import logo_small from "../../assets/SK.png";
 import "./Navbar.css";
 import { HeaderTabs } from "../../Data/HeaderTabs";
 import { Link } from "react-router-dom";
-import { mobileBreakpoint } from "../../Data/constants";
+import { mobileBreakpoint, tabletBreakpoint } from "../../Data/constants";
 
 declare interface propType {
   currentTab: string;
@@ -18,12 +18,13 @@ declare interface propType {
 
 function Navbar(props: propType) {
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+  const isTablet = useMediaQuery(`(max-width:${tabletBreakpoint}px)`);
 
   return (
     <Grid className="Navbar" flexDirection={isMobile ? "column" : "row"}>
       <Grid item className="Navbar__logo">
         <img
-          src={isMobile ? logo_small : logo}
+          src={isMobile || isTablet ? logo_small : logo}
           alt="logo"
           className="Navbar__logo__image"
         />
@@ -43,7 +44,9 @@ function Navbar(props: propType) {
                     : "Navbar__HeaderTabs__Tab"
                 }
               >
-                <Typography variant={isMobile ? "caption" : "h6"}>
+                <Typography
+                  variant={isMobile ? "caption" : isTablet ? "subtitle1" : "h6"}
+                >
                   {tab.tabName}
                 </Typography>
               </Box>

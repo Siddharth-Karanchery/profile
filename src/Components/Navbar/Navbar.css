@@ -55,3 +55,25 @@
     padding: 2px 10px;
   }
 }
+
+/*-------------- TABLET ------------------- */
+@media screen and (max-width: 850px) {
+  .Navbar {
+    width: 100vw;
+  }
+  .Navbar__logo {
+    width: 200rem;
+  }
+  .Navbar__HeaderTabs {
+    width: 100vw;
+    margin: 1em;
+
+    justify-content: center;
+    margin-left: -2em;
+  }
+  .Navbar__HeaderTabs__Tab,
+  .Navbar__HeaderTabs__Tab__current {
+    margin: 0px 5px;
+    padding: 2px 10px;
+  }
+}

@@ -70,3 +70,23 @@
     width: 100%;
   }
 }
+/*-------------- TABLET ------------------- */
+@media screen and (max-width: 850px) {
+  .Resume {
+    padding: 0 0 20px 0;
+  }
+  .Resume__Header,
+  .Resume__Body {
+    width: 90%;
+  }
+  .Resume__Body__ele {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Resume__Body__ele__left,
+  .Resume__Body__ele__right {
+    width: 100%;
+  }
+}

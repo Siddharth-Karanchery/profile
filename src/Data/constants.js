@@ -20,3 +20,4 @@ export const cloudinaryBaseURL =
   "https://res.cloudinary.com/dojwdze7d/image/upload/";
 
 export const mobileBreakpoint = 450;
+export const tabletBreakpoint = 850;
