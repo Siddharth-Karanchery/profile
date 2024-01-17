@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -9,12 +10,16 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "./PortfolioSwiper.css";
 import PortfolioCard from "../PortfolioCard/PortfolioCard";
+import { mobileBreakpoint, tabletBreakpoint } from "../../../Data/constants";
 
 declare interface PropType {
   title: string;
   data: PortfolioSwiperType[];
 }
 function PortfolioSwiper(props: PropType) {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+  const isTablet = useMediaQuery(`(max-width:${tabletBreakpoint}px)`);
+
   return (
     <Box className="Portfolio__swiper">
       <Typography variant="h5" style={{ marginBottom: "-30px" }}>
@@ -22,7 +27,7 @@ function PortfolioSwiper(props: PropType) {
       </Typography>
       <Swiper
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={isMobile || isTablet ? 1 : 3}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

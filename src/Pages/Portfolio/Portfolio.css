@@ -7,3 +7,18 @@
   align-items: center;
   gap: 100px;
 }
+/*-------------- Responsive Design ------------------- */
+/*-------------- MOBILE ------------------- */
+@media screen and (max-width: 450px) {
+  .Portfolio {
+    padding: 0rem;
+    gap: 50px;
+  }
+}
+/*-------------- TABLET ------------------- */
+@media screen and (max-width: 850px) and (min-width: 450px) {
+  .Portfolio {
+    padding: 0rem 2rem;
+    gap: 50px;
+  }
+}
