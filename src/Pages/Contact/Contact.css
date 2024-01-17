@@ -62,3 +62,62 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+/*-------------- Responsive Design ------------------- */
+/*-------------- MOBILE ------------------- */
+@media screen and (max-width: 450px) {
+  .Contact {
+    height: fit-content;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .Contact__left,
+  .Contact__right {
+    margin-top: 1rem;
+    width: 90%;
+  }
+  .Contact__left__ele,
+  .Contact__left__social {
+    width: 90%;
+  }
+  .Contact__right {
+    padding: 1rem 0;
+    height: 50vh;
+  }
+  .Contact__right__input {
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .Contact__right__buttonPanel {
+    width: 90%;
+  }
+}
+/*-------------- TABLET ------------------- */
+@media screen and (max-width: 850px) and (min-width: 450px) {
+  .Contact {
+    height: fit-content;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  .Contact__left,
+  .Contact__right {
+    margin-top: 1rem;
+    width: 90%;
+  }
+  .Contact__left__ele,
+  .Contact__left__social {
+    width: 90%;
+  }
+  .Contact__right {
+    padding: 1rem 0;
+    height: 50vh;
+  }
+  .Contact__right__input {
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .Contact__right__buttonPanel {
+    width: 90%;
+  }
+}
