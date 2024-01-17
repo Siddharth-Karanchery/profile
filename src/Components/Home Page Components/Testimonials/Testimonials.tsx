@@ -12,7 +12,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "./Testimonials.css";
 import { Box } from "@mui/material";
-import { testimonials } from "../../../Data/testimonialData";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import { Typography } from "@mui/material";
 import { mobileBreakpoint } from "../../../Data/constants";
@@ -21,15 +20,17 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase";
 
 function Testimonials() {
+  const [testimonials, setTestimonials] = React.useState<
+    { [x: string]: any }[]
+  >([]);
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
 
   const fetchPost = async () => {
-    await getDocs(collection(db, "UI")).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({
+    await getDocs(collection(db, "Testimonials")).then((result) => {
+      const data = result.docs.map((doc) => ({
         ...doc.data(),
       }));
-      // setTodos(newData);
-      console.log("newData: ", newData);
+      setTestimonials(data);
     });
   };
 
