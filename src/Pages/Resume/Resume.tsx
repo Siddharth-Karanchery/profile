@@ -1,14 +1,34 @@
+import * as React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { ButtonProps } from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import "./Resume.css";
-import { resumeData } from "../../Data/resume";
 import { mobileBreakpoint } from "../../Data/constants";
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+
 function Resume() {
+  const [resumeData, setResumeData] = React.useState<{ [x: string]: any }[]>(
+    []
+  );
+
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
+  const fetchPost = async () => {
+    await getDocs(collection(db, "Resume")).then((result) => {
+      const data = result.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setResumeData(data);
+    });
+  };
+
+  React.useEffect(() => {
+    fetchPost();
+  }, []);
 
   const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
     color: "black",
@@ -66,7 +86,7 @@ function Resume() {
             </Box>
             <Box className="Resume__Body__ele__right">
               <ul style={{ margin: "0px" }}>
-                {role.responsibility.map((resp) => (
+                {role.responsibility.map((resp: string) => (
                   <li style={{ margin: "10px", textAlign: "justify" }}>
                     {resp}
                   </li>
