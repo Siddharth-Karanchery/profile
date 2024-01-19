@@ -1,11 +1,33 @@
+import * as React from "react";
+
 import { Box, LinearProgress, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "./Skillset.css";
-import { skillsetData } from "../../../Data/skillsetData";
+
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firebase";
+
 import { mobileBreakpoint } from "../../../Data/constants";
 
 function Skillset() {
+  const [skillsetData, setSkillsetData] = React.useState<
+    { [x: string]: any }[]
+  >([]);
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+
+  const fetchSkillset = async () => {
+    await getDocs(collection(db, "Skillset")).then((result) => {
+      const data = result.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      console.log("data: ", data);
+      setSkillsetData(data);
+    });
+  };
+
+  React.useEffect(() => {
+    fetchSkillset();
+  }, []);
 
   return (
     <Box className="Skillset">
