@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { Box } from "@mui/material";
 
 import "./Portfolio.css";
@@ -6,11 +8,28 @@ import { uiData } from "../../Data/ui";
 import PortfolioSwiper from "../../Components/Portfolio Page Components/PortfolioSwiper/PortfolioSwiper";
 import { webdevData } from "../../Data/webdev";
 import { paintingData } from "../../Data/paintings";
-import { sketchesData } from "../../Data/sketches";
 import { inkArtData } from "../../Data/inkArt";
 import { digitalArtData } from "../../Data/digitalArt";
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+
 function Portfolio() {
+  const [sketchesData, setSketchesData] = React.useState<
+    { [x: string]: any }[]
+  >([]);
+  const fetchSketches = async () => {
+    await getDocs(collection(db, "Sketches")).then((result) => {
+      const data = result.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setSketchesData(data);
+    });
+  };
+
+  React.useEffect(() => {
+    fetchSketches();
+  }, []);
   return (
     <Box className="Portfolio">
       <PortfolioSwiper title={"UI Design"} data={uiData} />

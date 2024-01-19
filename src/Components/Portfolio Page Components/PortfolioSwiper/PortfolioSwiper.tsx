@@ -14,7 +14,7 @@ import { mobileBreakpoint, tabletBreakpoint } from "../../../Data/constants";
 
 declare interface PropType {
   title: string;
-  data: PortfolioSwiperType[];
+  data: PortfolioSwiperType[] | { [x: string]: any }[];
 }
 function PortfolioSwiper(props: PropType) {
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
