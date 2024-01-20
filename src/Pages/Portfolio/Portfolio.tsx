@@ -5,7 +5,6 @@ import { Box } from "@mui/material";
 import "./Portfolio.css";
 
 import PortfolioSwiper from "../../Components/Portfolio Page Components/PortfolioSwiper/PortfolioSwiper";
-import { webdevData } from "../../Data/webdev";
 import { paintingData } from "../../Data/paintings";
 import { inkArtData } from "../../Data/inkArt";
 
@@ -20,6 +19,9 @@ function Portfolio() {
     { [x: string]: any }[]
   >([]);
   const [uIData, setUIData] = React.useState<{ [x: string]: any }[]>([]);
+  const [webDevData, setWebDevData] = React.useState<{ [x: string]: any }[]>(
+    []
+  );
 
   const fetchSketches = async () => {
     await getDocs(collection(db, "Sketches")).then((result) => {
@@ -48,15 +50,25 @@ function Portfolio() {
     });
   };
 
+  const fetchWebDev = async () => {
+    await getDocs(collection(db, "WebDev")).then((result) => {
+      const data = result.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setWebDevData(data);
+    });
+  };
+
   React.useEffect(() => {
     fetchSketches();
     fetchDigitalArt();
     fetchUI();
+    fetchWebDev();
   }, []);
   return (
     <Box className="Portfolio">
       <PortfolioSwiper title={"UI Design"} data={uIData} />
-      <PortfolioSwiper title={"Web Development"} data={webdevData} />
+      <PortfolioSwiper title={"Web Development"} data={webDevData} />
       <PortfolioSwiper title={"Paintings"} data={paintingData} />
       <PortfolioSwiper title={"Sketches"} data={sketchesData} />
       <PortfolioSwiper title={"Ink works"} data={inkArtData} />
