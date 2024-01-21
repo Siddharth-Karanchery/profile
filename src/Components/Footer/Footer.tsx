@@ -8,7 +8,11 @@ import {
   InstagramPath,
   LinkedInPath,
   TwitterPath,
+  mobileBreakpoint,
+  tabletBreakpoint,
 } from "../../Data/constants";
+
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import "./Footer.css";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -20,6 +24,9 @@ declare interface propType {
 }
 
 function Footer(props: propType) {
+  const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
+  const isTablet = useMediaQuery(`(max-width:${tabletBreakpoint}px)`);
+
   const redirect = (link: string) => {
     switch (link) {
       case "Github":
@@ -97,10 +104,12 @@ function Footer(props: propType) {
         {HeaderTabs.map((tab) => (
           <Link
             to={tab.path}
-            style={{ textDecoration: "none", color: "#012997" }}
+            style={{ textDecoration: "none", color: "#012997", margin: "10px" }}
           >
             <Box onClick={() => props.handleTabSelect(tab.tabName)}>
-              <Typography variant="h5">{tab.tabName}</Typography>
+              <Typography variant={isMobile ? "subtitle1" : "h5"}>
+                {tab.tabName}
+              </Typography>
             </Box>
           </Link>
         ))}
