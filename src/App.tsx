@@ -20,6 +20,7 @@ function App() {
     <div className="App">
       <Navbar currentTab={currentTab} handleTabSelect={handleTabSelect} />
       <Routes>
+        <Route path="/profile" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/portfolio" element={<Portfolio />} />
