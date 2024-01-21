@@ -5,7 +5,6 @@ import { Box } from "@mui/material";
 import "./Portfolio.css";
 
 import PortfolioSwiper from "../../Components/Portfolio Page Components/PortfolioSwiper/PortfolioSwiper";
-import { paintingData } from "../../Data/paintings";
 
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
@@ -22,6 +21,9 @@ function Portfolio() {
     []
   );
   const [inkData, setInkData] = React.useState<{ [x: string]: any }[]>([]);
+  const [paintingsData, setPaintingsData] = React.useState<
+    { [x: string]: any }[]
+  >([]);
 
   const fetchSketches = async () => {
     await getDocs(collection(db, "Sketches")).then((result) => {
@@ -66,6 +68,14 @@ function Portfolio() {
       setInkData(data);
     });
   };
+  const fetchPaintings = async () => {
+    await getDocs(collection(db, "Paintings")).then((result) => {
+      const data = result.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setPaintingsData(data);
+    });
+  };
 
   React.useEffect(() => {
     fetchSketches();
@@ -73,12 +83,13 @@ function Portfolio() {
     fetchUI();
     fetchWebDev();
     fetchInk();
+    fetchPaintings();
   }, []);
   return (
     <Box className="Portfolio">
       <PortfolioSwiper title={"UI Design"} data={uIData} />
       <PortfolioSwiper title={"Web Development"} data={webDevData} />
-      <PortfolioSwiper title={"Paintings"} data={paintingData} />
+      <PortfolioSwiper title={"Paintings"} data={paintingsData} />
       <PortfolioSwiper title={"Sketches"} data={sketchesData} />
       <PortfolioSwiper title={"Ink works"} data={inkData} />
       <PortfolioSwiper title={"Digital Art"} data={digitalArtData} />
