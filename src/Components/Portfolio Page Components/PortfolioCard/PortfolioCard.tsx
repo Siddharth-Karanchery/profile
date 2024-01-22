@@ -2,6 +2,7 @@ import { Box, Chip, Typography } from "@mui/material";
 
 import "./PortfolioCard.css";
 import { cloudinaryBaseURL } from "../../../Data/constants";
+import { linkExplorer } from "../../../Functions/Functions";
 
 declare interface PropType {
   title: string;
@@ -34,6 +35,11 @@ function PortfolioCard(props: PropType) {
         style={{ transform: "scale(0.9)" }}
         src={`${cloudinaryBaseURL}${props.thumbId}`}
         alt=""
+        onClick={() =>
+          props.imageId
+            ? linkExplorer(props.imageId, true)
+            : props.link && linkExplorer(props.link, false)
+        }
       />
     </Box>
   );

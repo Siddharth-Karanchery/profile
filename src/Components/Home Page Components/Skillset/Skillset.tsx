@@ -20,7 +20,6 @@ function Skillset() {
       const data = result.docs.map((doc) => ({
         ...doc.data(),
       }));
-      console.log("data: ", data);
       setSkillsetData(data);
     });
   };

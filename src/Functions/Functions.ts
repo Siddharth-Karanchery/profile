@@ -3,6 +3,7 @@ import {
   InstagramPath,
   LinkedInPath,
   TwitterPath,
+  cloudinaryBaseURL,
 } from "../Data/constants";
 
 export const redirect = (link: string) => {
@@ -20,4 +21,10 @@ export const redirect = (link: string) => {
       window.open(TwitterPath, "_blank", "noreferrer");
       break;
   }
+};
+
+export const linkExplorer = (link: string, isImage: boolean) => {
+  isImage
+    ? window.open(`${cloudinaryBaseURL}${link}`, "_blank", "noreferrer")
+    : window.open(link, "_blank", "noreferrer");
 };

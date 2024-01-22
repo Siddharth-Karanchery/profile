@@ -46,6 +46,7 @@ function PortfolioSwiper(props: PropType) {
               link={ele.link}
               thumbId={ele.thumbId}
               tags={ele.tags}
+              imageId={ele.imageId}
             />
           </SwiperSlide>
         ))}
