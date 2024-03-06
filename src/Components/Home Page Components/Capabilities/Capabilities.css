@@ -97,3 +97,41 @@
     justify-content: center;
   }
 }
+/*-------------- TABLET ------------------- */
+@media screen and (max-width: 850px) and (min-width: 450px) {
+  .Capabilities {
+    margin-top: -5rem;
+    height: 100vh;
+  }
+  .Capabilities__title {
+    text-transform: uppercase;
+  }
+  .Capabilities__panel {
+    margin-top: 1rem;
+    width: 100%;
+
+    flex-direction: column;
+  }
+  .Capabilities__left {
+    width: 100%;
+    min-height: 50vh;
+  }
+  .Capabilities__left__card {
+    width: 12rem;
+    height: 12rem;
+    margin: 10px;
+  }
+  .Capabilities__left__card__icon {
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 1rem;
+  }
+  .Capabilities__right {
+    margin: 2rem 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

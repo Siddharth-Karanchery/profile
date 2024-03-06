@@ -14,7 +14,7 @@ import "./Testimonials.css";
 import { Box } from "@mui/material";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
 import { Typography } from "@mui/material";
-import { mobileBreakpoint } from "../../../Data/constants";
+import { mobileBreakpoint, tabletBreakpoint } from "../../../Data/constants";
 
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase";
@@ -24,7 +24,7 @@ function Testimonials() {
     { [x: string]: any }[]
   >([]);
   const isMobile = useMediaQuery(`(max-width:${mobileBreakpoint}px)`);
-
+  const isTablet = useMediaQuery(`(max-width:${tabletBreakpoint}px)`);
   const fetchPost = async () => {
     await getDocs(collection(db, "Testimonials")).then((result) => {
       const data = result.docs.map((doc) => ({
@@ -48,7 +48,7 @@ function Testimonials() {
       </Typography>
       <Swiper
         spaceBetween={30}
-        slidesPerView={isMobile ? 1 : 3}
+        slidesPerView={isMobile || isTablet ? 1 : 3}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

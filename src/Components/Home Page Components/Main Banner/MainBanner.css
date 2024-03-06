@@ -79,3 +79,24 @@
     margin-bottom: -2rem;
   }
 }
+/*-------------- TABLET ------------------- */
+@media screen and (max-width: 850px) and (min-width: 450px) {
+  .MainBanner {
+    height: auto;
+    flex-direction: column;
+  }
+  .MainBanner__left {
+    width: 90%;
+    height: 80vh;
+  }
+  .MainBanner__right {
+    margin: 5rem 0;
+    width: 90%;
+    height: 50%;
+  }
+  .MainBanner__right__text {
+    width: 100%;
+    height: 35vh;
+    margin-bottom: -2rem;
+  }
+}
