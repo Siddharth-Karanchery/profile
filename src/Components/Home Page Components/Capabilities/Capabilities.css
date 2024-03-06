@@ -62,7 +62,7 @@
 /*-------------- MOBILE ------------------- */
 @media screen and (max-width: 450px) {
   .Capabilities {
-    margin-top: 1rem;
+    margin-top: 10rem;
     height: 100vh;
   }
   .Capabilities__title {
