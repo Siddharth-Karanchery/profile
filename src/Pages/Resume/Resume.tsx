@@ -67,7 +67,7 @@ function Resume() {
           <Box className="Resume__Body__ele">
             <Box className="Resume__Body__ele__left">
               <Typography
-                variant="h5"
+                variant="h6"
                 className="Resume__ele__left__companyName"
                 style={{ margin: `${isMobile ? 5 : 10}px 0` }}
               >{`${role.companyName}`}</Typography>

@@ -37,7 +37,7 @@ function TestimonialCard(props: propType) {
       </Box>
       <Box className="TestimonialCard__Body">
         <Typography
-          variant={isMobile ? "h6" : "h5"}
+          variant={isMobile ? "subtitle1" : "h5"}
           style={{ textAlign: "justify" }}
         >
           {props.text}

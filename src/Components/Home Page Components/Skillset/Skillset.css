@@ -44,7 +44,7 @@
 /*-------------- MOBILE ------------------- */
 @media screen and (max-width: 450px) {
   .Skillset {
-    margin-top: 10rem;
+    margin-top: 12rem;
     height: max-content;
     padding: 2rem 0;
   }
