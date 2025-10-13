@@ -13,6 +13,8 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   const [currentTab, setCurrentTab] = React.useState("About");
 
+  console.log(process.env.REACT_APP_API_KEY);
+
   const handleTabSelect = (tabName: string) => {
     setCurrentTab(tabName);
   };
