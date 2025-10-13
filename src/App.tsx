@@ -1,37 +1,33 @@
-import * as React from "react";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import Experience from "./pages/Experience";
+import Portfolio from "./pages/Portfolio";
+import Certificates from "./pages/Certificates";
+import NotFound from "./pages/NotFound";
 
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import "./App.css";
-import Home from "./Pages/Home/Home";
-import Resume from "./Pages/Resume/Resume";
-import Portfolio from "./Pages/Portfolio/Portfolio";
-import Certificates from "./Pages/Certificates/Certificates";
-import Contact from "./Pages/Contact/Contact";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
+const queryClient = new QueryClient();
 
-function App() {
-  const [currentTab, setCurrentTab] = React.useState("About");
-
-  console.log(process.env.REACT_APP_API_KEY);
-
-  const handleTabSelect = (tabName: string) => {
-    setCurrentTab(tabName);
-  };
-  return (
-    <div className="App">
-      <Navbar currentTab={currentTab} handleTabSelect={handleTabSelect} />
-      <Routes>
-        <Route path="/profile" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/certificates" element={<Certificates />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer handleTabSelect={handleTabSelect} />
-    </div>
-  );
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/certificates" element={<Certificates />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
