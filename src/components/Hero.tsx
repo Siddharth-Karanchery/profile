@@ -34,19 +34,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col bg-background pt-20">
-      {/* Code Editor Tabs */}
-      <div className="flex border-b border-border bg-code-bg">
-        <CodeTab active={activeTab === 0} onClick={() => setActiveTab(0)} icon={FileCode}>
-          home.tsx
-        </CodeTab>
-        <CodeTab active={activeTab === 1} onClick={() => setActiveTab(1)} icon={Code2}>
-          skills.ts
-        </CodeTab>
-        <CodeTab active={activeTab === 2} onClick={() => setActiveTab(2)} icon={Terminal}>
-          about.js
-        </CodeTab>
-        <div className="flex-1 bg-code-bg"></div>
-      </div>
+
 
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-6 py-20 bg-gradient-to-br from-background via-background to-code-bg">
