@@ -13,25 +13,29 @@ const Testimonials = () => {
     {
       name: "Sarah Johnson",
       role: "Product Manager at TechCorp",
-      content: "Outstanding developer who consistently delivers high-quality code. Their attention to detail and problem-solving skills are exceptional.",
+      content:
+        "Outstanding developer who consistently delivers high-quality code. Their attention to detail and problem-solving skills are exceptional.",
       avatar: "SJ",
     },
     {
       name: "Michael Chen",
       role: "CTO at StartupXYZ",
-      content: "A true professional who goes above and beyond. Their full-stack expertise helped us launch our product ahead of schedule.",
+      content:
+        "A true professional who goes above and beyond. Their full-stack expertise helped us launch our product ahead of schedule.",
       avatar: "MC",
     },
     {
       name: "Emily Rodriguez",
       role: "Lead Designer at CreativeStudio",
-      content: "Excellent collaboration skills and deep understanding of both frontend and backend. A pleasure to work with on complex projects.",
+      content:
+        "Excellent collaboration skills and deep understanding of both frontend and backend. A pleasure to work with on complex projects.",
       avatar: "ER",
     },
     {
       name: "David Park",
       role: "Engineering Director",
-      content: "Impressive technical skills combined with great communication. They transformed our legacy system into a modern, scalable application.",
+      content:
+        "Impressive technical skills combined with great communication. They transformed our legacy system into a modern, scalable application.",
       avatar: "DP",
     },
   ];
@@ -41,9 +45,11 @@ const Testimonials = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            <span className="text-primary font-mono">{'<'}</span>
+            <span className="text-primary font-mono">{"<"}</span>
             <span className="text-foreground">Testimonials</span>
-            <span className="text-primary font-mono">{' />'}</span>
+            <span className="text-primary font-mono tracking-wide">
+              {" />"}
+            </span>
           </h2>
           <div className="h-1 w-24 bg-gradient-primary rounded-full"></div>
         </div>
@@ -64,8 +70,12 @@ const Testimonials = () => {
                       </span>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground font-mono">{testimonial.role}</p>
+                      <p className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-muted-foreground font-mono">
+                        {testimonial.role}
+                      </p>
                     </div>
                   </div>
                 </Card>

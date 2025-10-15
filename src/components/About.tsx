@@ -6,9 +6,11 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            <span className="text-primary font-mono">{'<'}</span>
+            <span className="text-primary font-mono">{"<"}</span>
             <span className="text-foreground">About Me</span>
-            <span className="text-primary font-mono">{' />'}</span>
+            <span className="text-primary font-mono tracking-wide">
+              {" />"}
+            </span>
           </h2>
           <div className="h-1 w-24 bg-gradient-primary rounded-full"></div>
         </div>
@@ -18,12 +20,13 @@ const About = () => {
           <div className="bg-background rounded-lg border border-border p-8 font-mono text-sm">
             <div className="space-y-2 text-muted-foreground">
               <div>
-                <span className="text-blue-400">const</span> <span className="text-yellow-300">aboutMe</span> ={" "}
-                <span className="text-foreground">{'{'}</span>
+                <span className="text-blue-400">const</span>{" "}
+                <span className="text-yellow-300">aboutMe</span> ={" "}
+                <span className="text-foreground">{"{"}</span>
               </div>
               <div className="pl-4">
                 <span className="text-purple-400">name:</span>{" "}
-                <span className="text-green-400">"Your Name"</span>,
+                <span className="text-green-400">"Siddharth Karanchery"</span>,
               </div>
               <div className="pl-4">
                 <span className="text-purple-400">role:</span>{" "}
@@ -31,25 +34,30 @@ const About = () => {
               </div>
               <div className="pl-4">
                 <span className="text-purple-400">location:</span>{" "}
-                <span className="text-green-400">"Your Location"</span>,
+                <span className="text-green-400">"Brampton, ON"</span>,
               </div>
               <div className="pl-4">
                 <span className="text-purple-400">passion:</span>{" "}
-                <span className="text-green-400">"Building amazing web experiences"</span>,
+                <span className="text-green-400">
+                  "Building amazing web experiences"
+                </span>
+                ,
               </div>
               <div className="pl-4">
-                <span className="text-purple-400">description:</span> <span className="text-foreground">`</span>
+                <span className="text-purple-400">description:</span>{" "}
+                <span className="text-foreground">`</span>
               </div>
               <div className="pl-8 text-foreground leading-relaxed">
-                I'm a passionate fullstack developer with expertise in modern web technologies. I love turning complex
-                problems into simple, beautiful, and intuitive solutions. When I'm not coding, you'll find me exploring
-                new technologies and contributing to open-source projects.
+                I'm a passionate fullstack developer with expertise in modern
+                web technologies. I love turning complex problems into simple,
+                beautiful, and intuitive solutions. When I'm not coding, you'll
+                find me exploring new technologies and building things.
               </div>
               <div className="pl-4">
                 <span className="text-foreground">`</span>
               </div>
               <div>
-                <span className="text-foreground">{'}'}</span>;
+                <span className="text-foreground">{"}"}</span>;
               </div>
             </div>
           </div>
@@ -62,10 +70,13 @@ const About = () => {
                   <Briefcase className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Experience</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                    Experience
+                  </h3>
                   <p className="text-muted-foreground">
-                    5+ years of professional experience in web development, delivering high-quality solutions for
-                    clients worldwide.
+                    5+ years(13 total) of professional experience in web
+                    development, delivering high-quality solutions for clients
+                    worldwide.
                   </p>
                 </div>
               </div>
@@ -77,9 +88,13 @@ const About = () => {
                   <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Education</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                    Education
+                  </h3>
                   <p className="text-muted-foreground">
-                    Bachelor's degree in Computer Science with focus on software engineering and modern web
+                    Master's degree in Embedded Systems Engineering and a
+                    bachelor's degree in Electrical and Electronics Engineering
+                    with focus on software engineering and modern web
                     technologies.
                   </p>
                 </div>
@@ -92,10 +107,12 @@ const About = () => {
                   <User className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Approach</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                    Approach
+                  </h3>
                   <p className="text-muted-foreground">
-                    I believe in writing clean, maintainable code and creating user-centric applications that make a
-                    real impact.
+                    I believe in writing clean, maintainable code and creating
+                    user-centric applications that make a real impact.
                   </p>
                 </div>
               </div>

@@ -1,22 +1,11 @@
 import { useState, useEffect } from "react";
 import { Code2, Terminal, FileCode } from "lucide-react";
 
-const CodeTab = ({ active, onClick, children, icon: Icon }: { active: boolean; onClick: () => void; children: React.ReactNode; icon: any }) => (
-  <button
-    onClick={onClick}
-    className={`flex items-center gap-2 px-4 py-2 text-sm font-mono transition-colors border-r border-border ${
-      active ? "bg-code-line text-primary" : "bg-code-bg text-muted-foreground hover:bg-code-line"
-    }`}
-  >
-    <Icon className="w-4 h-4" />
-    {children}
-  </button>
-);
-
 const Hero = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [displayText, setDisplayText] = useState("");
-  const fullText = "const developer = { name: 'Your Name', role: 'Fullstack Developer' };";
+  const fullText =
+    "const developer = { name: 'Siddharth Karanchery', role: 'Fullstack Developer' };";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -34,8 +23,6 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col bg-background pt-20">
-
-
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center px-6 py-20 bg-gradient-to-br from-background via-background to-code-bg">
         <div className="max-w-6xl w-full">
@@ -43,8 +30,10 @@ const Hero = () => {
             {/* Left: Code Display */}
             <div className="space-y-8 animate-fade-in">
               <div className="font-mono text-sm text-muted-foreground">
-                <span className="text-primary">1</span> <span className="text-blue-400">import</span>{" "}
-                <span className="text-yellow-300">{'{ Developer }'}</span> <span className="text-blue-400">from</span>{" "}
+                <span className="text-primary">1</span>{" "}
+                <span className="text-blue-400">import</span>{" "}
+                <span className="text-yellow-300">{"{ Developer }"}</span>{" "}
+                <span className="text-blue-400">from</span>{" "}
                 <span className="text-green-400">"@/universe"</span>;
               </div>
 
@@ -55,14 +44,15 @@ const Hero = () => {
                     Developer
                   </span>
                 </h1>
-                <div className="h-12 font-mono text-xl text-muted-foreground overflow-hidden">
-                  <span className="text-primary">{'>'}</span> {displayText}
-                  <span className="animate-pulse">|</span>
+                <div className="h-16 font-mono text-xl text-muted-foreground overflow-hidden">
+                  <span className="text-primary">{">"}</span> {displayText}
+                  <span className="blink-caret">|</span>
                 </div>
               </div>
 
               <p className="text-lg text-muted-foreground font-mono">
-                <span className="text-primary">//</span> Crafting elegant solutions with clean code
+                <span className="text-primary">//</span> Crafting elegant
+                solutions with clean code
               </p>
 
               <div className="flex gap-4 pt-4">

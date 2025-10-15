@@ -29,9 +29,11 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            <span className="text-primary font-mono">{'<'}</span>
+            <span className="text-primary font-mono">{"<"}</span>
             <span className="text-foreground">Get In Touch</span>
-            <span className="text-primary font-mono">{' />'}</span>
+            <span className="text-primary font-mono tracking-wide">
+              {" />"}
+            </span>
           </h2>
           <div className="h-1 w-24 bg-gradient-primary rounded-full"></div>
         </div>
@@ -41,10 +43,14 @@ const Contact = () => {
           <div className="bg-code-bg rounded-lg border border-border p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-mono text-primary">name: string</label>
+                <label className="text-sm font-mono text-primary">
+                  name: string
+                </label>
                 <Input
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                   className="bg-background border-primary/30 focus:border-primary font-mono"
                   placeholder="Your Name"
@@ -52,11 +58,15 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-mono text-primary">email: string</label>
+                <label className="text-sm font-mono text-primary">
+                  email: string
+                </label>
                 <Input
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                   className="bg-background border-primary/30 focus:border-primary font-mono"
                   placeholder="your.email@example.com"
@@ -64,10 +74,14 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-mono text-primary">message: string</label>
+                <label className="text-sm font-mono text-primary">
+                  message: string
+                </label>
                 <Textarea
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   required
                   className="bg-background border-primary/30 focus:border-primary font-mono min-h-[150px]"
                   placeholder="Your message here..."
@@ -88,12 +102,16 @@ const Contact = () => {
             <div className="bg-code-bg rounded-lg border border-border p-8 font-mono text-sm">
               <div className="space-y-2 text-muted-foreground">
                 <div>
-                  <span className="text-blue-400">const</span> <span className="text-yellow-300">contact</span> ={" "}
-                  <span className="text-foreground">{'{'}</span>
+                  <span className="text-blue-400">const</span>{" "}
+                  <span className="text-yellow-300">contact</span> ={" "}
+                  <span className="text-foreground">{"{"}</span>
                 </div>
                 <div className="pl-4">
                   <span className="text-purple-400">email:</span>{" "}
-                  <span className="text-green-400">"your.email@example.com"</span>,
+                  <span className="text-green-400">
+                    "your.email@example.com"
+                  </span>
+                  ,
                 </div>
                 <div className="pl-4">
                   <span className="text-purple-400">location:</span>{" "}
@@ -101,10 +119,13 @@ const Contact = () => {
                 </div>
                 <div className="pl-4">
                   <span className="text-purple-400">availability:</span>{" "}
-                  <span className="text-green-400">"Open to opportunities"</span>,
+                  <span className="text-green-400">
+                    "Open to opportunities"
+                  </span>
+                  ,
                 </div>
                 <div>
-                  <span className="text-foreground">{'}'}</span>;
+                  <span className="text-foreground">{"}"}</span>;
                 </div>
               </div>
             </div>
@@ -135,9 +156,12 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">Let's build something amazing</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">
+                    Let's build something amazing
+                  </h3>
                   <p className="text-muted-foreground text-sm">
-                    I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
+                    I'm always interested in hearing about new projects and
+                    opportunities. Feel free to reach out!
                   </p>
                 </div>
               </div>
