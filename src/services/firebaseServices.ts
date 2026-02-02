@@ -45,6 +45,22 @@ class firebaseServices {
       console.error("Error fetching users:", error);
     }
   }
+
+  async getTestimonialsData() {
+    if (!this.db) {
+      throw new Error("Database not initialized. Call connectToDB first.");
+    }
+    try {
+      const querySnapshot = await getDocs(collection(this.db, "Testimonials"));
+      const testimonialsList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return testimonialsList;
+    } catch (error) {
+      console.error("Error fetching testimonials:", error);
+    }
+  }
 }
 
 export default new firebaseServices();

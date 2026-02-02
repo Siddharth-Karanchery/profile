@@ -7,38 +7,41 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Quote } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import useFirebase from "@/hooks/useFirebase";
+import { cloudinaryBaseURL } from "@/constants/values";
+
+type Testimonial = {
+  id: string;
+  name?: string;
+  role?: string;
+  content?: string;
+  avatar?: string;
+  thumbId?: string;
+};
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Product Manager at TechCorp",
-      content:
-        "Outstanding developer who consistently delivers high-quality code. Their attention to detail and problem-solving skills are exceptional.",
-      avatar: "SJ",
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO at StartupXYZ",
-      content:
-        "A true professional who goes above and beyond. Their full-stack expertise helped us launch our product ahead of schedule.",
-      avatar: "MC",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Lead Designer at CreativeStudio",
-      content:
-        "Excellent collaboration skills and deep understanding of both frontend and backend. A pleasure to work with on complex projects.",
-      avatar: "ER",
-    },
-    {
-      name: "David Park",
-      role: "Engineering Director",
-      content:
-        "Impressive technical skills combined with great communication. They transformed our legacy system into a modern, scalable application.",
-      avatar: "DP",
-    },
-  ];
+  const firebase = useMemo(() => useFirebase(), []);
+  const { getTestimonialsData } = firebase;
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadTestimonials = async () => {
+      try {
+        const result = await getTestimonialsData();
+        if (isMounted && Array.isArray(result)) {
+          setTestimonials(result as Testimonial[]);
+        }
+      } catch (error) {
+        console.error("Failed to load testimonials:", error);
+      }
+    };
+    loadTestimonials();
+    return () => {
+      isMounted = false;
+    };
+  }, [getTestimonialsData]);
 
   return (
     <section className="py-20 px-6 bg-background">
@@ -56,25 +59,37 @@ const Testimonials = () => {
 
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+            {testimonials.map((testimonial) => (
+              <CarouselItem
+                key={testimonial.id}
+                className="md:basis-1/2 lg:basis-1/2"
+              >
                 <Card className="bg-code-bg border-primary/20 p-6 h-full">
                   <Quote className="w-8 h-8 text-primary/40 mb-4" />
                   <p className="text-muted-foreground mb-6 italic">
-                    "{testimonial.content}"
+                    "{testimonial.content ?? ""}"
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-                      <span className="font-mono text-primary font-bold">
-                        {testimonial.avatar}
-                      </span>
+                      {testimonial.thumbId ? (
+                        <img
+                          className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30"
+                          src={`${cloudinaryBaseURL}${testimonial.thumbId}`}
+                          alt="Testimonial user"
+                        />
+                      ) : (
+                        <span className="font-mono text-primary font-bold">
+                          {testimonial.name.split(" ")[0][0] +
+                            testimonial.name.split(" ")[1][0]}
+                        </span>
+                      )}
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">
-                        {testimonial.name}
+                        {testimonial.name ?? ""}
                       </p>
                       <p className="text-sm text-muted-foreground font-mono">
-                        {testimonial.role}
+                        {testimonial.role ?? ""}
                       </p>
                     </div>
                   </div>

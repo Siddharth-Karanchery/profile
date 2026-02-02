@@ -41,7 +41,7 @@ const Hero = () => {
                 <h1 className="text-5xl lg:text-7xl font-bold">
                   <span className="text-foreground">Hi, I'm </span>
                   <span className="text-primary bg-gradient-primary bg-clip-text text-transparent">
-                    Developer
+                    Siddharth Karanchery
                   </span>
                 </h1>
                 <div className="h-16 font-mono text-xl text-muted-foreground overflow-hidden">

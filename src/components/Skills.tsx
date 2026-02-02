@@ -9,7 +9,6 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       const data: Skill[] = await getSkillsData();
-      console.log("Fetched skills data:", data); // Debug log
       if (data && data.length > 0) {
         // Assume the first document contains our skills
         const skillsDoc = data[0] as any; // Type assertion for Firestore document data
@@ -105,7 +104,7 @@ const Skills = () => {
                 <span className="text-yellow-300">log</span>
                 <span className="text-foreground">(</span>
                 <span className="text-green-400">
-                  "Growth mindset activated 🚀"
+                  "Growth mindset activated!"
                 </span>
                 <span className="text-foreground">);</span>
               </div>
