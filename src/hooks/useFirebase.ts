@@ -27,6 +27,14 @@ const useFirebase = () => {
     return result;
   };
 
-  return { connect, getSkillsData, getTestimonialsData };
+  const getExperienceData = async () => {
+    if (!isConnected) {
+      await connect();
+    }
+    let result = await firebaseServices.getExperienceData();
+    return result;
+  };
+
+  return { connect, getSkillsData, getTestimonialsData, getExperienceData };
 };
 export default useFirebase;

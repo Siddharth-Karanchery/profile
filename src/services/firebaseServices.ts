@@ -1,7 +1,7 @@
 import { Skill } from "@/types/skill";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"; // if using Firestore
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCX61YvbT82mZ7V6jmM13PWaulVDExzRfo",
@@ -59,6 +59,26 @@ class firebaseServices {
       return testimonialsList;
     } catch (error) {
       console.error("Error fetching testimonials:", error);
+    }
+  }
+
+  async getExperienceData() {
+    if (!this.db) {
+      throw new Error("Database not initialized. Call connectToDB first.");
+    }
+    try {
+      const experienceQuery = query(
+        collection(this.db, "Experience"),
+        where("isDisplay", "==", true)
+      );
+      const querySnapshot = await getDocs(experienceQuery);
+      const experienceList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return experienceList;
+    } catch (error) {
+      console.error("Error fetching experience:", error);
     }
   }
 }
