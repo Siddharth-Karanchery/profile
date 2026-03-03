@@ -105,7 +105,7 @@ const Experience = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
 
-      <main className="pt-24 pb-20 px-6">
+      <main className="pt-44 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Professional Experience */}
           <section className="mb-16">

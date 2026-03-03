@@ -15,7 +15,7 @@ const useFirebase = () => {
     if (!isConnected) {
       await connect();
     }
-    let result = await firebaseServices.getSkillsData();
+    const result = await firebaseServices.getSkillsData();
     return result;
   };
 
@@ -23,7 +23,7 @@ const useFirebase = () => {
     if (!isConnected) {
       await connect();
     }
-    let result = await firebaseServices.getTestimonialsData();
+    const result = await firebaseServices.getTestimonialsData();
     return result;
   };
 
@@ -31,10 +31,60 @@ const useFirebase = () => {
     if (!isConnected) {
       await connect();
     }
-    let result = await firebaseServices.getExperienceData();
+    const result = await firebaseServices.getExperienceData();
     return result;
   };
 
-  return { connect, getSkillsData, getTestimonialsData, getExperienceData };
+  const getUIDesignData = async () => {
+    if (!isConnected) {
+      await connect();
+    }
+    const result = await firebaseServices.getUIDesignData();
+    return result;
+  };
+
+  const getWebDevData = async () => {
+    if (!isConnected) {
+      await connect();
+    }
+    const result = await firebaseServices.getWebDevData();
+    return result;
+  };
+
+  const getPaintingsData = async () => {
+    if (!isConnected) {
+      await connect();
+    }
+    const result = await firebaseServices.getPaintingsData();
+    return result;
+  };
+
+  const getSketchesData = async () => {
+    if (!isConnected) {
+      await connect();
+    }
+    const result = await firebaseServices.getSketchesData();
+    return result;
+  };
+
+  const getDigitalArtInkData = async () => {
+    if (!isConnected) {
+      await connect();
+    }
+    const result = await firebaseServices.getDigitalArtInkData();
+    return result;
+  };
+
+  return {
+    connect,
+    getSkillsData,
+    getTestimonialsData,
+    getExperienceData,
+    getUIDesignData,
+    getWebDevData,
+    getPaintingsData,
+    getSketchesData,
+    getDigitalArtInkData,
+  };
 };
 export default useFirebase;

@@ -1,6 +1,6 @@
 import { Skill } from "@/types/skill";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // if using Firestore
+import { Firestore, getFirestore } from "firebase/firestore"; // if using Firestore
 import { collection, getDocs, query, where } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -14,8 +14,23 @@ const firebaseConfig = {
 };
 
 class firebaseServices {
-  private db: any;
+  private db: Firestore | null = null;
   // Add your Firebase service methods here
+
+  private ensureDB() {
+    if (!this.db) {
+      throw new Error("Database not initialized. Call connectToDB first.");
+    }
+  }
+
+  private async getCollectionData(collectionName: string) {
+    this.ensureDB();
+    const querySnapshot = await getDocs(collection(this.db, collectionName));
+    return querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+  }
 
   connectToDB() {
     // Initialize Firebase
@@ -30,9 +45,7 @@ class firebaseServices {
 
   async getSkillsData() {
     // Example method to fetch skills data from Firestore
-    if (!this.db) {
-      throw new Error("Database not initialized. Call connectToDB first.");
-    }
+    this.ensureDB();
     // Implement your data fetching logic here
     try {
       const querySnapshot = await getDocs(collection(this.db, "skillsData"));
@@ -47,9 +60,7 @@ class firebaseServices {
   }
 
   async getTestimonialsData() {
-    if (!this.db) {
-      throw new Error("Database not initialized. Call connectToDB first.");
-    }
+    this.ensureDB();
     try {
       const querySnapshot = await getDocs(collection(this.db, "Testimonials"));
       const testimonialsList = querySnapshot.docs.map((doc) => ({
@@ -63,13 +74,11 @@ class firebaseServices {
   }
 
   async getExperienceData() {
-    if (!this.db) {
-      throw new Error("Database not initialized. Call connectToDB first.");
-    }
+    this.ensureDB();
     try {
       const experienceQuery = query(
         collection(this.db, "Experience"),
-        where("isDisplay", "==", true)
+        where("isDisplay", "==", true),
       );
       const querySnapshot = await getDocs(experienceQuery);
       const experienceList = querySnapshot.docs.map((doc) => ({
@@ -79,6 +88,46 @@ class firebaseServices {
       return experienceList;
     } catch (error) {
       console.error("Error fetching experience:", error);
+    }
+  }
+
+  async getUIDesignData() {
+    try {
+      return await this.getCollectionData("UI");
+    } catch (error) {
+      console.error("Error fetching UI data:", error);
+    }
+  }
+
+  async getWebDevData() {
+    try {
+      return await this.getCollectionData("WebDev");
+    } catch (error) {
+      console.error("Error fetching WebDev data:", error);
+    }
+  }
+
+  async getPaintingsData() {
+    try {
+      return await this.getCollectionData("Paintings");
+    } catch (error) {
+      console.error("Error fetching Paintings data:", error);
+    }
+  }
+
+  async getSketchesData() {
+    try {
+      return await this.getCollectionData("Sketches");
+    } catch (error) {
+      console.error("Error fetching Sketches data:", error);
+    }
+  }
+
+  async getDigitalArtInkData() {
+    try {
+      return await this.getCollectionData("Ink");
+    } catch (error) {
+      console.error("Error fetching DigitalArtInk data:", error);
     }
   }
 }
